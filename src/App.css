@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
+    background-color: #ffffff;
+    justify-content: center;
+    align-content: stretch;
+    align-items: left;
+    flex-direction: row-reverse;
+
+}
+
+.picIntro {
+  position: absolute;
+    background-position: 50%;
+    top: 0;
+    left: 0;
+    width: 2560px;
+    height: 600px;
+    opacity: .8;
+}
+
+.loader{
+margin-top: 700px;
+width: 100%;
+position: relative;
+margin-left: 0px;
+margin-bottom: 10px;
+padding-right: 0px;
+color: #000000;
+}
+.articlecard{
+    background-color: white;
+    width: 675px;
+    height: 286px;
+    padding: 48px 15px;
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: hsla(0,0%,100%,.8)!important;
+    border: 2px;
+    text-align:center;
+    margin-top: -15px;
+    transition: 0.3s;
+    margin-left: 66px;
+}
+
+.border{
+  margin-left:-296px;
+}
+
+.fa-comments:before {
+  content: "\f086";
+  margin-left: 430px;
+  font-size: 25px;
+  
+}
+
+.articlecard:hover{
+  box-shadow: 0 0 20px rgb(33, 29, 29);
+  background-color: rgba(247, 242, 247, 0.8)!important;
+}
+
+.navbar li:hover{
+  color: #000000;
+}
+
+.articlecard h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-feature-settings: normal;
+    text-decoration: none;
+    font-style: normal;
+    text-align: left;
+    font-size: 45px;
+    letter-spacing: normal;
+    line-break: auto;
+}
+.articlecard h4{
+  text-align: left;
+  font-size: 19px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(95, 89, 89);
+}
+.articlecard p{
+color: #591902;
+text-align: left;
+font-size: 15px;
+font-weight: 350;
+font-family: 'Source Sans Pro', sans-serif;
+}
+.navbar{
+  width: 360px;
+  height: 30px;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 10%), 0 2px 1px -1px rgb(0 0 0 / 5%);
+  position:fixed;
+  top: 0;
+  position: relative;
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 0.5rem!important;
+  align-items: center;
+  border-radius: 0.75rem;
+  backdrop-filter: saturate(200%) blur(30px);
+  background-color: hsla(0,0%,100%,.8)!important;
+  margin-top: 10px;
+  padding-bottom: 0.5rem!important;
+}
+
+.fa-solid.fa-house {
+margin-top: 10px;
+margin-left: -2px;
+}
+.fa-solid.fa-house:hover {
+  color: #000000;
+  }
+
+.articlecard p{
+  margin-bottom: 1px;
+}
+
+.fa-regular, .far {
+  font-weight: 500;
+  margin-top: 12px;
+  margin-left: -573px;
+  text-decoration: none;
+}
+.fa-comment:before {
+  content: "\f075";
+  font-size: 20px; 
+  margin: 3px;
+    color: black;
+}
+.fa-thumbs-up:before {
+  content: "\f164";
+  font-weight: 100;
+  font-size: 20px;
+  margin-right: 3px;
+}
+.navbar ul{
+  text-decoration: none;
+  list-style-type: none;
+  display:flex;
+}
+.fa-solid, .fas {
+  font-weight: 900;
+  margin-left: 15px;
+}
+.navbar li{
+  margin: 10px;
+}
+
+.articlelist{
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+  width: 612px;
+  word-wrap: break-word;
+    margin-top: 490px;
+}
+
+.topleft,.topright{
+  flex:3;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.topCenter{
+  flex:6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.topList a{
+  color: rgb(95 89 89);
+text-decoration: none;
+font-weight:800;
+}
+.topList a:hover{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1440px) {
+  .articlecard {
+    margin-left: -131px;
+    margin-top: -15px;
+    width: 663px;
   }
-  to {
-    transform: rotate(360deg);
+  .articlecard p{
+    font-size: 20px;
+font-weight: 400;
   }
+  .navbar {
+    margin-left: -849px;
+  }
+  
+}
+@media screen and (max-width: 2560px){
+.articlecard {
+  margin-left: -79px;
+  margin-top: -15px;
+  width: 661px;
+}
+.navbar {
+  margin-left: -781px;
+}
+}
+@media screen and (max-width: 1024px){
+  .articlecard {
+    margin-left: 153px;
+    margin-top: -15px;
+    width: 661px;
+  }
+  .navbar {
+    margin-left: -648px;
+  }
+  }
+
+@media screen and (max-width: 768px) {
+  .articlecard {
+    margin-left: 223px;
+    margin-top: -15px;
+    width: 669px;
+    height: 328px;
+  }
+  .navbar {
+    margin-left: -542px;
+  }
+  
+}
+
+  @media screen and (max-width: 425px) {
+    .articlecard {
+      margin-left: 428px;
+      margin-top: -15px;
+      width: 343px;
+      height: 328px;
+  
+    }
+    .navbar {
+      margin-left: -475px;
+    }
 }
