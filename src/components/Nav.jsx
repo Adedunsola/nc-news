@@ -3,9 +3,9 @@ const background = require('../images/background.jpg')
 
 const Nav=()=>{
     return(
-  <div>
+  <nav>
      <img className='picIntro' src={background} alt="picture of mountains surrounded by greenery and water "></img>
-    <div className="navbar">
+    <section className="navbar">
             <section>
                 <div className='topright'><ul className='topList'>
                     <Link><i class="fa-solid fa-house" aria-label="home icon"></i></Link>
@@ -15,8 +15,8 @@ const Nav=()=>{
                 </ul>
                 </div>
                 </section>
-        </div>
-        </div>
+        </section>
+        </nav>
             
  
         
