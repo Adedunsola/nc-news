@@ -32,7 +32,7 @@ export default function ArticleList(){
       (
     <section>
          <section className="articlelist">
-         <section className="border">{articles.map((article)=>(
+         {articles.map((article)=>(
     <main className="articlecard" key={article.article_id}>
         <Link to={`/articles/${article.article_id}`}><h2 className='link'>{article.title}</h2></Link><br></br>
         <br></br>
@@ -43,7 +43,6 @@ export default function ArticleList(){
         
     </main>
 ))}
-    </section>
     </section>
     </section>
 )

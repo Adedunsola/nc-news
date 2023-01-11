@@ -3,13 +3,14 @@
 
 .App{
   display: flex;
-    background-color:rgb(220 165 230 / 21%);
+    background-color:#ffff;
     justify-content: center;
     align-content: stretch;
     align-items: left;
     flex-direction: row-reverse;
 
 }
+
 
 .picIntro {
   display: flex;
@@ -45,9 +46,7 @@ color: #000000;
     margin-left: 66px;
 }
 
-.border{
-  background-color:rgb(220 165 230 / 21%);
-}
+
 
 .fa-comments:before {
   content: "\f086";
@@ -99,9 +98,6 @@ font-family: 'Source Sans Pro', sans-serif;
   width: 360px;
   height: 30px;
   box-shadow: 0 3px 5px -1px rgb(0 0 0 / 10%), 0 2px 1px -1px rgb(0 0 0 / 5%);
-  position:fixed;
-  top: 0;
-  position: relative;
   display:flex;
   box-sizing: border-box;
   flex: 6;
@@ -112,7 +108,12 @@ font-family: 'Source Sans Pro', sans-serif;
   border-radius: 0.75rem;
   backdrop-filter: saturate(200%) blur(30px);
   background-color: hsla(0,0%,100%,.8)!important;
-  margin-top: 10px;
+  margin-top: -392px;
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding-bottom: 0.5rem!important;
 }
 
@@ -213,7 +214,8 @@ margin-left: -2px;
     font-size: 18px;
     font-weight: 300;
     color: #6d6b6f;
-    /* font-style: normal; */
+    text-align: justify;
+    
 }
 .articleInfo h3{
   margin-top: 16px;
@@ -237,7 +239,7 @@ font-weight:800;
 
 @media screen and (max-width: 1440px) {
   .articlecard {
-    margin-left: -131px;
+    margin-left: -417px;
     margin-top: -15px;
     width: 663px;
   }
@@ -246,54 +248,104 @@ font-weight:800;
 font-weight: 400;
   }
   .navbar {
-    margin-left: -849px;
+    margin-left: -44px;
+    margin-top: -353px;
   }
-  
+  .articleInfo{
+    width: 562px;
+    margin-left: -783px;
+  }
+  .articleInfo h1{
+    font-size: 40px;
+  }
+  .articleInfo h5{
+    padding-right: 21px;
+    font-size: 13px;
+    margin-top: -232px;
+    text-align: justify;
+
+  }
 }
 @media screen and (max-width: 2560px){
 .articlecard {
-  margin-left: -79px;
-  margin-top: -15px;
-  width: 661px;
+  margin-left: -82px;
+    margin-top: -15px;
+    width: 661px;
 }
 .navbar {
-  margin-left: -781px;
+  margin-left: -44px;
+    margin-top: -357px;
 }
 }
 @media screen and (max-width: 1024px){
   .articlecard {
-    margin-left: 153px;
+    margin-left: 73px;
     margin-top: -15px;
     width: 661px;
   }
   .navbar {
-    margin-left: -648px;
+    margin-left: 193px;
+  }
+  .articleInfo{
+    width: 609px;
+    margin-left: -384px;
+  }
+  .articleInfo h1{
+    font-size: 50px;
+  }
+  .articleInfo h5{
+    padding-right: 21px;
+    font-size: 14px;
+    text-align: justify;
   }
   }
 
 @media screen and (max-width: 768px) {
   .articlecard {
-    margin-left: 223px;
+    margin-left: 184px;
     margin-top: -15px;
     width: 669px;
     height: 328px;
   }
   .navbar {
-    margin-left: -542px;
+    margin-left: 57px;
   }
-  
+  .articleInfo{
+    width: 577px;
+    margin-left: -124px;
+  }
+  .articleInfo h5{
+    padding-right: 20px;
+    font-size: 14px;
+    text-align: justify;
+  }
 }
 
   @media screen and (max-width: 425px) {
     .articlecard {
-      margin-left: 428px;
-      margin-top: -15px;
-      width: 343px;
-      height: 328px;
+      margin-left: 161px;
+    margin-top: -15px;
+    width: 293px;
+    height: 328px
   
     }
     .navbar {
-      margin-left: -475px;
+      margin-top: -419px;
+      margin-left: 2px;
+    }
+    .articleInfo{
+      width: 511px;
+    padding-right: 16px;
+    margin-left: 275px
+    }
+    .articleInfo h1{
+      font-size: 30px;
+    }
+    .articleInfo h5{
+      padding-right: 11px;
+      margin-top: -289px;
+      font-size: 12px;
+      text-align: justify;
     }
 }
 
