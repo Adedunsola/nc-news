@@ -20,3 +20,8 @@ export const getArticleById = (article_id)=>{
 
 
 
+export const getCommentsByArticle = (article_id)=>{
+    return articleApi.get(`/articles/${article_id}/comments`).then(({data})=>{
+        return data.comments
+    })
+}

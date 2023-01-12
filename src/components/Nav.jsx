@@ -9,7 +9,6 @@ const Nav=()=>{
             <section>
                 <div>
                     <ul>
-                    <Link><i class="fa-solid fa-house" aria-label="home icon"></i></Link>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link>Hot Topics</Link></li>
                     <li><Link>Sign in</Link></li> 

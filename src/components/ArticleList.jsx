@@ -7,6 +7,7 @@ import Timestamp from 'react-timestamp'
 
 
 
+
 export default function ArticleList(){
     const [articles, setArticles] = useState([])
     const [isLoading, setIsLoading]=useState(true)
@@ -38,9 +39,6 @@ export default function ArticleList(){
         <br></br>
         <h4>-{article.author}</h4><br></br>
         <p><Timestamp date={article.created_at}/></p>
-        <Link><i class="fa-regular fa-comment" aria-label="comments for this article"> {article.comment_count}</i></Link>
-        <i class="fa-solid fa-thumbs-up" aria-label="votes for this article"> {article.votes}</i>
-        
     </main>
 ))}
     </section>
