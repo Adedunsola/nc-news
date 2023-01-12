@@ -38,7 +38,7 @@ export default function ArticleList(){
         <Link to={`/articles/${article.article_id}`}><h2 className='link'>{article.title}</h2></Link><br></br>
         <br></br>
         <h4>-{article.author}</h4><br></br>
-        <p><Timestamp date={article.created_at}/></p>
+        <p><Timestamp date={article.created_at}/></p><i className="articlevote" class="fa-solid fa-thumbs-up" aria-label="votes for this article"> {article.votes}</i>
     </main>
 ))}
     </section>
