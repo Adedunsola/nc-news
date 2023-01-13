@@ -3,20 +3,27 @@ const background = require('../images/background.jpg')
 
 const Nav=()=>{
     return(
-  <div>
+  <nav>
      <img className='picIntro' src={background} alt="picture of mountains surrounded by greenery and water "></img>
-    <div className="navbar">
+    <section className="navbar">
             <section>
-                <div className='topright'><ul className='topList'>
-                    <Link><i class="fa-solid fa-house" aria-label="home icon"></i></Link>
+                <div>
+                    <ul>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link>Hot Topics</Link></li>
+                    <div className='dropdown'>
+                        <li><button className='dropbtn'>Hot Topics</button></li>
+                    <div className='dropdown-content'>
+                        <Link>Cooking</Link>
+                        <Link>Coding</Link>
+                        <Link>Football</Link>
+                    </div>
+                    </div>
                     <li><Link>Sign in</Link></li> 
                 </ul>
                 </div>
                 </section>
-        </div>
-        </div>
+        </section>
+        </nav>
             
  
         
