@@ -2,8 +2,35 @@ body{
   margin: 0 auto;
   background-color: rgb(253, 230, 251);
 }
+.votebutton{
+  margin-top: 73px;
+  width: 137px;
+  height: 39px;
+  background-color: rgba(217, 216, 216, 0.815);
+  border-radius: 12px;
+  font-size: 40px;
+  padding-bottom: 13px;
+  text-align: center;
 
+}
 
+span:hover{
+  text-decoration: none;
+}
+.votebutton span{
+text-align: center;
+font-size: 20px;
+}
+.votebutton span.value{
+  font-size: 18px;
+  text-decoration: none;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-decoration-style: none;
+  }
+.votebutton span.value:hover{
+  text-decoration: none;
+}
 .picIntro {
   display: flex;
   position: absolute;
@@ -15,6 +42,51 @@ body{
     opacity: .9;
 }
 
+
+.likebutton{
+  border: none;
+  background-color: rgb(121 117 117 / 1%);
+
+}
+.likebutton:active{
+  color: green;
+}
+
+.likebutton:hover{
+  color: green;
+}
+.uil-thumbs-up:before {
+  content: '\e9a1';
+  font-weight: 300;
+  font-size: 30px;
+  text-decoration: none;
+}
+.uil-thumbs-up:before :hover {
+  color: green;
+}
+.uil-thumbs-down:before {
+  content: '\e9b2';
+  font-weight: 300;
+  font-size: 30px;
+  text-decoration: none;
+}
+.votebutton.value{
+  text-decoration: none;
+}
+.dislikebutton{
+  border:none;
+  background-color:rgb(121 117 117 / 1%);
+
+}
+.dislikebutton :active{
+  color: red;
+}
+.dislikebutton :hover{
+  color: red;
+} 
+font{
+  text-decoration: none;
+}
 .loader{
 margin-top: 700px;
 width: 100%;
@@ -45,7 +117,7 @@ color: #000000;
 .icons{
    padding-left: 23px;
     padding-top: 48px;
-    font-size: 18px;
+    font-size: 23px;
 }
 .icons :hover{
   text-decoration: underline;
@@ -104,6 +176,8 @@ font-family: 'Source Sans Pro', sans-serif;
     margin-top: -705px;
     position: fixed;
     margin-left: 0px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
     padding-bottom: 0.5rem!important;
 }
 .commentcard{
@@ -112,17 +186,7 @@ font-family: 'Source Sans Pro', sans-serif;
      margin-right: 85px;
 }
 
-.fa-regular .fa-thumbs-down{
-  margin-left: 8px;
-    font-weight: 900;
-    font-size: 25px;
-}
 
-.fa-regular .fa-thumbs-up{
-  margin-left: 8px;
-    font-weight: 900;
-    font-size: 25px;
-} 
 
 
 .articlecard p{
@@ -194,7 +258,6 @@ font-family: 'Source Sans Pro', sans-serif;
     font-weight: 100;
     font-family: 'Source Sans Pro';
     color: rgb(62 61 63);
-    /* line-break: auto; */
     line-height: 30px;
     font-family: 'Playfair Display', serif;
     text-align: justify;
@@ -263,7 +326,44 @@ font-weight:800;
   font-weight: bold;
 }
 
+.dropbtn{
+border: none;
+cursor: pointer;
+backdrop-filter: saturate(200%) blur(7px);
+background-color: hsl(288deg 38% 67% / 24%);
+font-family:'Times New Roman', Times, serif ;
+font-size: 16px;
+font-weight: 600;
+}
+.dropbtn:hover{
+  color: #5c004a
+}
+.dropdown-content{
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown{
+position: relative;
+display: inline-block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  backdrop-filter: saturate(200%) blur(7px);
+}
 
 @media all and (max-width: 768px) {
   .articlecard {
@@ -288,6 +388,7 @@ font-weight:800;
     padding-right: 20px;
     font-size: 14px;
     text-align: justify;
+    margin-top: 10px;
   }
   .commentcard{
     width: 80%;

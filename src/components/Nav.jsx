@@ -10,7 +10,14 @@ const Nav=()=>{
                 <div>
                     <ul>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link>Hot Topics</Link></li>
+                    <div className='dropdown'>
+                        <li><button className='dropbtn'>Hot Topics</button></li>
+                    <div className='dropdown-content'>
+                        <Link>Cooking</Link>
+                        <Link>Coding</Link>
+                        <Link>Football</Link>
+                    </div>
+                    </div>
                     <li><Link>Sign in</Link></li> 
                 </ul>
                 </div>

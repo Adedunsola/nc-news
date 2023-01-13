@@ -6,7 +6,11 @@ import LinearProgress from '@mui/joy/LinearProgress'
 import { getArticleById } from "../utils/api";
 import Timestamp from 'react-timestamp'
 import Comments from "./Comments";
+import VoteCount from "./VoteCount";
 const midPicture = require('../images/girl.jpg')
+
+
+
 
 export default function SingleArticle(){
     const [articles, setArticles] = useState([])
@@ -16,20 +20,19 @@ export default function SingleArticle(){
     
     useEffect(()=>{
         getArticleById(article_id).then((articleInfo)=>{
-setArticles(articleInfo)
-setIsLoading(false)
+        setArticles(articleInfo)
+        setIsLoading(false)
         })
     },[])
 
-    
     
     
 return isLoading ? (
     <LinearProgress className='loader' color="Info" size="lg" variant="soft" value="100" thickness={12}></LinearProgress> 
 ):
  (
-    <section>
-        <div className="articleInfo">
+<section>
+     <div className="articleInfo">
         {articles.map((article)=>(
             <section>
                  <h1 key={article.article_id}>{article.title}</h1><br/><br/><br/><br/>
@@ -40,15 +43,15 @@ return isLoading ? (
             <Link to="ViewComments" spy={true} smooth={true}>
             <p className="SeeComments"> View {article.comment_count} comments</p>
             </Link>
-            <i className="articlevote" class="fa-solid fa-thumbs-up" aria-label="votes for this article"> {article.votes}</i>
+            <VoteCount setArticles={setArticles} articles={articles} article_id={article.article_id}/>
     </div>
             </section>  
         ))} 
-</div>
-<img className="commentpicture" src={midPicture} alt=""></img>
-<div id="ViewComments">
+    </div>
+    <img className="commentpicture" src={midPicture} alt=""></img>
+    <div id="ViewComments">
     <Comments/>
-</div>
+    </div>
 
 </section>
  

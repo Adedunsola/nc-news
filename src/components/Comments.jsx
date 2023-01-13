@@ -3,27 +3,21 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Timestamp from "react-timestamp";
 import { getCommentsByArticle } from "../utils/api";
-import { patchVotesById } from "../utils/api";
+
 
 
 
 export default function Comments(){
 const[comments,setComments]=useState([])
-const[noComments,setNoComments]=useState()
-const [voteChange, setVoteChange] =useState(0)
+const[noComments,setNoComments]=useState(false)
 const {article_id}=useParams()
 
 
-function incVote(){
-    patchVotesById(article_id, 1).then((res)=>{
-    setVoteChange((currVoteChange)=>currVoteChange +1)
-    })
-        }
-    
 
 useEffect(()=>{
     getCommentsByArticle(article_id).then((allComments)=>{
-    if(allComments===[]){
+        
+    if(allComments.length===0){
         setNoComments(true)
     }
         setComments(allComments)
@@ -41,8 +35,8 @@ return noComments ? (
     <section className="commentcard">
         <div id="comments">
              {comments.map((comment)=>(
-<ul className="eachcomment">
-    <li key={comment.comment_id}><br/>
+<ul key={comment.comment_id} className="eachcomment">
+    <li><br/>
     <h5><img src="https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" alt={`picture of ${comment.author}`}></img>{comment.author}</h5>
     <h3>{comment.body}</h3><br/>
     <p>posted  <Timestamp relative date={comment.created_at} /></p><br/>
